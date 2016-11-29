@@ -12,14 +12,15 @@ Instructions for Running the Template
 2) it will display a background.png
 3) pressing space will exit the program
 
-Instructions for Using the Template
-===================================
+Instructions for Using the Template (or a general idea)
+=======================================================
 1) copy the project
-2) create your own class that inherits from Game (example:class MyGame(Game))
-3) be sure to initialize the parent using super()
-4) override the function 'interpretSpot'
-5) in game.py import your class. 
-6) instantiate your class instead of Game
+2) edit config.py
+3) create your own class that inherits from Game (example:class MyGame(Game))
+4) be sure to initialize the parent using super()
+5) override the function 'interpretSpot'
+6) in game.py import your class. 
+7) instantiate your class instead of Game
 
 License
 ========

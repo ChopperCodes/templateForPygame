@@ -3,7 +3,7 @@ from lib.clsGame import Game
 
 game = Game(config)
 
-spot='title'
+spot='init'
 while not game.isDone:
 	spot = game.logic(spot)
 

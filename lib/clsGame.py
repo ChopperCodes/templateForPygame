@@ -29,17 +29,21 @@ class Game(object):
 		
 			response = self.interpretSpot(response, event)
 		
+		self.wrapUp(spot)
+		return response
+
+	def wrapUp(self, spot):
 		pygame.display.update()
 		pygame.display.flip()	
 		self.clock.tick(self.fps)
-		return response
 
 	def interpretSpot(self, spot, event):
-		keys = pygame.key.get_pressed()
 		if spot == 'init':
 			spot = 'title'
-		elif spot == 'title' and keys[pygame.K_SPACE]:
-			self.isDone = self.__closeGame()
+		elif spot == 'title':
+			keys = pygame.key.get_pressed()
+			if keys[pygame.K_SPACE]:
+				self.isDone = self.__closeGame()
 
 		return spot
 

@@ -1,7 +1,7 @@
 import pygame
 from clsBackground import Background
 
-class Game():
+class Game(object):
 	
 	def __init__(self, config):
 		self.isDone = False

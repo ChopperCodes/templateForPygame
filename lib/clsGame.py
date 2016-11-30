@@ -35,12 +35,11 @@ class Game(object):
 		return response
 
 	def interpretSpot(self, spot, event):
+		keys = pygame.key.get_pressed()
 		if spot == 'init':
 			spot = 'title'
-		elif spot == 'title':
-			keys = pygame.key.get_pressed()
-			if keys[pygame.K_SPACE]:
-				self.isDone = self.__closeGame()
+		elif spot == 'title' and keys[pygame.K_SPACE]:
+			self.isDone = self.__closeGame()
 
 		return spot
 
